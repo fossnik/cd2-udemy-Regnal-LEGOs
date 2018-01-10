@@ -5,7 +5,7 @@ public class Inheritance {
 		Kart kart = new Kart(true, "Black", "KNL");
 		Alien alien = new Alien(true, "Green", "Kargon 5");
 
-		System.out.println("Man is: " + man.color);
+		System.out.println("SaloonCar is: " + man.color);
 		System.out.println("Kart is: " + kart.color);
 		System.out.println("Alien is: " + alien.color);
 	}
