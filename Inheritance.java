@@ -1,4 +1,4 @@
-public class Main {
+public class Inheritance {
 
 	public static void main(String[] args) {
 		Man man = new Man(true, "White", "Rodger");
