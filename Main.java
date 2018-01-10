@@ -10,15 +10,13 @@ public class Main {
 		System.out.println("Alien is: " + alien.color);
 	}
 
-	public static class Man {
-		private Boolean moves;
-		private String color;
-		private String name;
+	public static class GeneralObject {
+		public Boolean moves;
+		public String color;
 
-		public Man(Boolean _moves, String _color, String _name) {
+		public GeneralObject(Boolean _moves, String _color) {
 			this.moves = _moves;
 			this.color = _color;
-			this.name = _name;
 		}
 
 		public Boolean getMoves() { return moves; }
@@ -26,50 +24,41 @@ public class Main {
 
 		public String getColor() { return color; }
 		public void setColor(String color) { this.color = color; }
+	}
+
+	public static class Man extends GeneralObject {
+		private String name;
+
+		public Man(Boolean _moves, String _color, String _name) {
+			super(_moves, _color);
+			this.name = _name;
+		}
 
 		public String getName() { return name; }
 		public void setName(String name) { this.name = name; }
 	}
 
-	public static class Kart {
-		private Boolean moves;
-		private String color;
+	public static class Kart extends GeneralObject {
 		private String manufacturer;
 
 		// a public constructor for Kart
 		public Kart(Boolean _moves, String _color, String _manufacturer) {
-			this.moves = _moves;
-			this.color = _color;
+			super(_moves, _color);
 			this.manufacturer = _manufacturer;
 		}
-
-		public Boolean getMoves() { return moves; }
-		public void setMoves(Boolean moves) { this.moves = moves; }
-
-		public String getColor() { return color; }
-		public void setColor(String color) { this.color = color; }
 
 		public String getManufacturer() { return manufacturer; }
 		public void setManufacturer(String manufacturer) { this.manufacturer = manufacturer; }
 	}
 
-	public static class Alien {
-		private Boolean moves;
-		private String color;
+	public static class Alien extends GeneralObject {
 		private String planet;
 
 		// a public constructor for Alien
 		public Alien(Boolean _moves, String _color, String _planet) {
-			this.moves = _moves;
-			this.color = _color;
+			super(_moves, _color);
 			this.planet = _planet;
 		}
-
-		public Boolean getMoves() { return moves; }
-		public void setMoves(Boolean moves) { this.moves = moves; }
-
-		public String getColor() { return color; }
-		public void setColor(String color) { this.color = color; }
 
 		public String getPlanet() { return planet; }
 		public void setPlanet(String planet) { this.planet = planet; }
